@@ -1,0 +1,211 @@
+.main {
+  margin: 3vh 3vh 3vh 0px;
+}
+
+.handlers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &Wrapper {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.back,
+.handler {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 20px;
+  color: #5f6165;
+  font-size: 18px;
+  font-weight: 500;
+  height: 6vh;
+  background-color: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover {
+    background-color: rgba(10, 18, 36, 0.15);
+  }
+  &.active {
+    background-color: rgb(47, 55, 72);
+    &:hover {
+      background-color: rgba(10, 18, 36, 0.15);
+    }
+  }
+}
+
+.pet {
+  margin-top: 2vh;
+  height: 86vh;
+  padding: 15px;
+  border: 3px solid rgb(207, 215, 219);
+  background-color: rgb(240, 242, 243);
+  border-radius: 15px;
+  width: calc(100vw - (250px + 9vh));
+  overflow-y: scroll;
+  box-shadow: 20px 0px 37px 8px rgba(143, 154, 163, 0.4);
+  &Title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &Items {
+    list-style: none;
+  }
+  &Item {
+    & > span {
+      font-weight: 500;
+    }
+    & + & {
+      margin-top: 10px;
+    }
+  }
+  &Gallery {
+    font-size: 22px;
+    text-align: center;
+    margin: 15px 0;
+    &Items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px;
+      gap: 10px;
+      border: 3px solid rgb(183, 194, 201);
+      border-radius: 15px;
+    }
+    &Item {
+      width: 240px;
+      height: 240px;
+      display: flex;
+      align-items: center;
+    }
+    &Img {
+      max-width: 240px;
+      max-height: 240px;
+      border-radius: 15px;
+    }
+  }
+  &Applicants {
+    font-size: 22px;
+    text-align: center;
+    margin: 15px 0;
+    &Items {
+    }
+    &Item {
+      position: relative;
+      list-style: none;
+      padding: 7px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      & + & {
+        border-top: 2px solid #5f616540;
+      }
+    }
+    &Text {
+      > span {
+        font-weight: 500;
+      }
+    }
+    &Link {
+      color: #041c4c;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &Date {
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  &Input {
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid #5f616540;
+    background-color: #fff;
+    cursor: text;
+    &.error {
+      border: 1px solid red;
+    }
+  }
+  &Select {
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid #5f616540;
+    background-color: #fff;
+  }
+  &Text {
+    padding: 6px;
+    height: 100px;
+    border-radius: 8px;
+    border: 1px solid #5f616540;
+    background-color: #fff;
+    cursor: text;
+    resize: none;
+  }
+  &LabelCheckbox {
+    cursor: pointer;
+  }
+  &Checkbox {
+    & + span {
+      padding-left: 8px;
+    }
+  }
+  &ImageLinksBox {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    > input {
+      flex-grow: 1;
+    }
+  }
+  &AddLink {
+    border-radius: 8px;
+    background-color: #5f6165;
+    color: rgb(207, 215, 219);
+    font-weight: 500;
+    padding: 7px 35px;
+    &.error {
+      color: #000;
+      background-color: red;
+    }
+  }
+  &ImageItem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    & + & {
+      margin-top: 6px;
+    }
+  }
+  &DeleteLink {
+    padding: 5px;
+    background-color: red;
+    color: #fff;
+    border-radius: 6px;
+  }
+  &Create {
+    background-color: rgb(10, 18, 36);
+    color: #fff;
+    height: 60px;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.loading {
+      background-color: #ccc;
+    }
+  }
+}

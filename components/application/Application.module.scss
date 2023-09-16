@@ -1,0 +1,84 @@
+.main {
+  margin: 3vh 3vh 3vh 0px;
+}
+
+.handlers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back,
+.delete {
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 20px;
+  color: #5f6165;
+  font-size: 18px;
+  font-weight: 500;
+  height: 6vh;
+  background-color: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover {
+    color: #fff;
+    background-color: rgb(10, 18, 36);
+  }
+}
+
+.application {
+  margin-top: 2vh;
+  height: 86vh;
+  padding: 15px;
+  border: 3px solid rgb(207, 215, 219);
+  background-color: rgb(240, 242, 243);
+  border-radius: 15px;
+  width: calc(100vw - (250px + 9vh));
+  overflow-y: scroll;
+  box-shadow: 20px 0px 37px 8px rgba(143, 154, 163, 0.4);
+  &Title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  &Top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &Items {
+    list-style: none;
+  }
+  &Item {
+    & > span {
+      font-weight: 500;
+    }
+    & + & {
+      margin-top: 10px;
+    }
+  }
+  &Pets {
+    font-size: 22px;
+    text-align: center;
+    margin: 15px 0;
+    &Items {
+    }
+    &Item {
+      position: relative;
+      list-style: none;
+      padding: 7px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      & + & {
+        border-top: 2px solid #5f616540;
+      }
+    }
+    &Text {
+      > span {
+        font-weight: 500;
+      }
+    }
+  }
+}

@@ -1,0 +1,181 @@
+.main {
+  margin: 3vh 3vh 3vh 0px;
+}
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  height: 6vh;
+  background-color: #fff;
+  border-radius: 15px;
+  width: calc(100vw - (250px + 9vh));
+}
+.tab {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5f6165;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: rgb(241, 243, 244);
+  border: 3px solid rgb(207, 215, 219);
+  border-radius: 10px;
+  width: calc(50% - 5px);
+  transition: all 0.2s;
+  cursor: pointer;
+  &.active {
+    color: #fff;
+    background-color: rgb(10, 18, 36);
+    border: 3px solid rgb(10, 18, 36);
+    pointer-events: none;
+    cursor: default;
+  }
+}
+.pets {
+  margin-top: 2vh;
+  height: 86vh;
+  padding: 15px;
+  border: 3px solid rgb(207, 215, 219);
+  background-color: rgb(240, 242, 243);
+  border-radius: 15px;
+  width: calc(100vw - (250px + 9vh));
+  overflow-y: scroll;
+  box-shadow: 20px 0px 37px 8px rgba(143, 154, 163, 0.4);
+  &Wrapper {
+    position: relative;
+  }
+}
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.items {
+}
+.item {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 15% 65% 17%;
+  list-style: none;
+  padding: 10px 3px;
+  cursor: pointer;
+  &:hover {
+    background-color: #dadfe186;
+  }
+  & + & {
+    border-top: 1px solid #ccc;
+  }
+  & > div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &Name {
+    font-weight: 500;
+  }
+  &Category {
+    & > span {
+      font-weight: 500;
+    }
+  }
+  &Price {
+    text-align: center;
+  }
+}
+.chartWrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 40%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  &Input {
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid #5f616540;
+    background-color: #fff;
+    cursor: text;
+    &.error {
+      border: 1px solid red;
+    }
+  }
+  &Select {
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid #5f616540;
+    background-color: #fff;
+  }
+  &Text {
+    padding: 6px;
+    height: 100px;
+    border-radius: 8px;
+    border: 1px solid #5f616540;
+    background-color: #fff;
+    cursor: text;
+    resize: none;
+  }
+  &LabelCheckbox {
+    cursor: pointer;
+  }
+  &Checkbox {
+    & + span {
+      padding-left: 8px;
+    }
+  }
+  &ImageLinksBox {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    > input {
+      flex-grow: 1;
+    }
+  }
+  &AddLink {
+    border-radius: 8px;
+    background-color: #5f6165;
+    color: rgb(207, 215, 219);
+    font-weight: 500;
+    padding: 7px 35px;
+    &.error {
+      color: #000;
+      background-color: red;
+    }
+  }
+  &ImageItem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    & + & {
+      margin-top: 6px;
+    }
+  }
+  &DeleteLink {
+    padding: 5px;
+    background-color: red;
+    color: #fff;
+    border-radius: 6px;
+  }
+  &Create {
+    background-color: rgb(10, 18, 36);
+    color: #fff;
+    height: 60px;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.loading {
+      background-color: #ccc;
+    }
+  }
+}

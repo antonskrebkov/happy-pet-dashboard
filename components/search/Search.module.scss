@@ -1,0 +1,41 @@
+.search {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  &Field {
+    cursor: text;
+    border: 1px solid #5f616540;
+    border-radius: 10px;
+    height: 28px;
+    background-color: #fff;
+    color: #000;
+    width: 31px;
+    padding: 0 5px 0 30px;
+    pointer-events: none;
+    transition: all 0.4s ease-in-out;
+    &.active {
+      pointer-events: all;
+      padding-left: 35px;
+      padding-right: 48px;
+      width: 100%;
+    }
+  }
+  &Image {
+    cursor: pointer;
+    cursor: pointer;
+    width: 37px;
+    height: 28px;
+    padding: 3px 4px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 10px;
+  }
+  &Loader {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+}

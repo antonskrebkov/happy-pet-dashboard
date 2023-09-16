@@ -1,0 +1,144 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px;
+  height: 94vh;
+  border: 3px solid rgb(207, 215, 219);
+  background-color: rgb(240, 242, 243);
+  border-radius: 15px;
+  margin: 3vh;
+  padding: 40px 10px 10px;
+  box-shadow: -14px 0px 37px 8px rgba(143, 154, 163, 0.4);
+  &Wrapper {
+  }
+}
+
+.logo {
+  position: relative;
+  font-weight: 800;
+  font-size: 20px;
+  padding-left: 67px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("/header-logo.svg");
+    width: 46px;
+    height: 48px;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid rgb(148, 152, 160);
+  &Items {
+  }
+  &Item {
+    list-style: none;
+    & + & {
+      margin-top: 5px;
+    }
+  }
+  &Link {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 12px;
+    color: #5f6165;
+    transition: all 0.2s;
+    &:hover {
+      background-color: rgba(10, 18, 36, 0.15);
+    }
+    &Image {
+      margin-right: 7px;
+    }
+  }
+  .active {
+    color: rgb(214, 217, 226);
+    background-color: rgb(10, 18, 36);
+    pointer-events: none;
+  }
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  &Limitations {
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #802323;
+  }
+  &Wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  &Image {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    &Wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 40px;
+      width: 100%;
+      height: 40px;
+      border: 2px solid #000;
+      border-radius: 50%;
+    }
+  }
+  &Name {
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &Info {
+    position: relative;
+    &Button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      min-width: 23px;
+      height: 23px;
+      border: 2px solid #000;
+      border-radius: 50%;
+      cursor: default;
+    }
+    &Content {
+      position: absolute;
+      top: -70px;
+      left: -4px;
+      background-color: #fff;
+      box-shadow: inset 0px 0px 160px 72px rgba(158, 155, 158, 0.5);
+      border: 2px solid #000;
+      border-radius: 10px;
+      padding: 10px;
+      & > p {
+        white-space: nowrap;
+        font-weight: 500;
+        & + p {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  &SignButton {
+    border: 1px solid #5f616540;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    background-color: #fff;
+    align-self: flex-end;
+  }
+}

@@ -1,0 +1,98 @@
+.main {
+  margin: 3vh 3vh 3vh 0px;
+}
+
+.dashboard {
+  height: 94vh;
+  padding: 15px;
+  border-radius: 15px;
+  border: 3px solid rgb(207, 215, 219);
+  background-color: rgb(240, 242, 243);
+  width: calc(100vw - (250px + 9vh));
+  overflow-y: scroll;
+  box-shadow: 20px 0px 37px 8px rgba(143, 154, 163, 0.4);
+  &Chart {
+    border-left: 2px solid #5f616540;
+  }
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  height: calc(100% - 48px);
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  &Input {
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid #5f616540;
+    background-color: #fff;
+    cursor: text;
+    &Error {
+      font-weight: 700;
+      color: red;
+      margin-right: 5px;
+    }
+  }
+  &DeleteLink {
+    padding: 5px;
+    background-color: red;
+    color: #fff;
+    border-radius: 6px;
+  }
+  &Create {
+    background-color: rgb(10, 18, 36);
+    color: #fff;
+    height: 40px;
+    width: 120px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.loading {
+      background-color: #ccc;
+    }
+  }
+}
+
+.categories {
+  &Title {
+    margin: 15px 0;
+    font-size: 18px;
+    text-align: center;
+  }
+  &Items {
+  }
+  &Item {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    & + & {
+      margin-top: 10px;
+    }
+  }
+  &Delete {
+    background-color: rgb(128, 20, 20);
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 10px;
+  }
+}
