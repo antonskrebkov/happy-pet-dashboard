@@ -1,7 +1,6 @@
 import NextAuth, { User } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
-import { users } from "@/data/users";
 
 const handler = NextAuth({
   providers: [
@@ -13,14 +12,14 @@ const handler = NextAuth({
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) return null;
 
-        const currentUser = users.find(
-          (user) => user.email === credentials.email
-        );
-
-        if (currentUser && currentUser.password === credentials.password) {
-          const { password, ...userWithoutPassword } = currentUser;
-
-          return userWithoutPassword as User;
+        if (
+          process.env.ADMIN_EMAIL &&
+          process.env.ADMIN_PASSWORD === credentials.password
+        ) {
+          return {
+            email: process.env.ADMIN_EMAIL,
+            name: process.env.ADMIN_NAME,
+          } as User;
         }
 
         return null;
