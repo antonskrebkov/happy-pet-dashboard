@@ -25,6 +25,7 @@ body {
   @media (max-width: 800px), (max-height: 380px) {
     position: relative;
     pointer-events: none;
+    touch-action: none;
     &::before {
       content: "This app does not support mobile devices. Please try rotating your device into landscape orientation. If that does not help, please use your PC or laptop.";
       position: absolute;
