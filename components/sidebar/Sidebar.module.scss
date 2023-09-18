@@ -40,6 +40,10 @@
   padding-top: 25px;
   border-top: 1px solid rgb(148, 152, 160);
   &Items {
+    @media (max-height: 437px) {
+      max-height: 120px;
+      overflow: scroll;
+    }
   }
   &Item {
     list-style: none;
@@ -75,6 +79,9 @@
     font-weight: 500;
     margin-bottom: 20px;
     color: #802323;
+    @media (max-height: 437px) {
+      display: none;
+    }
   }
   &Wrapper {
     display: flex;

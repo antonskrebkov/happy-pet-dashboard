@@ -57,7 +57,7 @@
 .item {
   display: grid;
   justify-content: space-between;
-  grid-template-columns: 15% 65% 17%;
+  grid-template-columns: 34% 34% 29%;
   list-style: none;
   padding: 10px 3px;
   cursor: pointer;
@@ -81,7 +81,7 @@
     }
   }
   &Price {
-    text-align: center;
+    text-align: end;
   }
 }
 .chartWrapper {
@@ -90,7 +90,6 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  width: 40%;
 }
 
 .form {

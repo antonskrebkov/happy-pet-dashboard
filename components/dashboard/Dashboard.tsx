@@ -191,7 +191,7 @@ const Dashboard: FC<DashboardProps> = ({ friends, categories }) => {
               </button>
             </form>
             <h3 className={styles.categoriesTitle}>Categories list</h3>
-            <ul className={styles.categoriesList}>
+            <ul className={styles.categoriesItems}>
               {categories &&
                 categories.map((category) => (
                   <li key={category.id} className={styles.categoriesItem}>

@@ -56,8 +56,7 @@
 .item {
   display: grid;
   justify-content: space-between;
-  grid-template-columns: 15% 65% 17%;
-
+  grid-template-columns: 25% 25% 47%;
   list-style: none;
   padding: 10px 3px;
   cursor: pointer;
@@ -81,7 +80,7 @@
     }
   }
   &Date {
-    text-align: center;
+    text-align: end;
   }
 }
 .chartWrapper {
